@@ -1,0 +1,4 @@
+function isPalindrome(x) {
+  const str = x.toLowerCase();
+  return str === str.split("").reverse().join("") ? true : false;
+}
