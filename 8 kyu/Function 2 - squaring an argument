@@ -1,0 +1,1 @@
+const square = (arg) => {return arg*arg}
