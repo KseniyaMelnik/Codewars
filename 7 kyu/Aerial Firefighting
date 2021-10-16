@@ -1,0 +1,6 @@
+ function waterbombs(fire, w) {
+   const arr = fire.split('Y');
+   let res = 0;
+   arr.forEach((el)=>{ res += Math.ceil(el.length/w)})
+   return res;
+ }
