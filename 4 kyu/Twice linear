@@ -1,0 +1,17 @@
+function dblLinear(n) {
+   let arr = [], x = 0, y = 0;
+   arr[0] = 1;
+   for (let i=0; i<=n; i++){
+     let nextX = 2 * arr[x] + 1;
+     let nextY = 3 * arr[y] + 1;
+     if (nextX <= nextY) {
+            arr.push(nextX)
+            x++
+            if (nextX == nextY)
+                y++
+        } else {
+            arr.push(nextY)
+            y++
+        }
+   }
+  return arr[n];
