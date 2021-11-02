@@ -1,0 +1,8 @@
+const sc = (screws) => {
+  const arr = screws.split('');
+  let total = 1
+  for (let i=1; i< arr.length; i++) {
+  (arr[i] === arr[i-1]) ? total +=2 : total +=7
+  }
+  return total 
+}
