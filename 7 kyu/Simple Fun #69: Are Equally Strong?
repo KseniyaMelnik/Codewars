@@ -1,0 +1,1 @@
+const areEquallyStrong = (yourLeft, yourRight, friendsLeft, friendsRight) => ((yourLeft === friendsLeft && yourRight  === friendsRight  ) || (friendsLeft === yourRight && friendsRight === yourLeft))
