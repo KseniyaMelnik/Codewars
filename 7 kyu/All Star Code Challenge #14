@@ -1,0 +1,5 @@
+function median(array) {
+  let sortArray = array.sort((a,b) => a-b)
+  const medianIndex = Math.floor(array.length/2) 
+  return sortArray.length%2 === 0? (sortArray[medianIndex] + sortArray[medianIndex - 1])/2 : sortArray[medianIndex]
+}
