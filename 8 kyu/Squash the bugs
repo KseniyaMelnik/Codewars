@@ -1,0 +1,8 @@
+const findLongest = (str) => {
+  
+  const spl = str.split(" ");
+  let longest = 0
+  
+  spl.map (el => el.length > longest ? longest = el.length : longest)
+    return longest
+}
