@@ -1,0 +1,13 @@
+function sumOrProduct(array, n) {
+  let sortArray = array.slice().sort((a,b)=>(a-b))
+  let sum = 0
+  let product = 1
+  
+  for (let i = 0; i<n; i++) {
+    product*=sortArray[i]
+  }
+    for (let j = array.length-1; j>=array.length-n; j--) {
+      sum+=sortArray[j]
+  }
+  return sum>product? 'sum' : sum<product? 'product' : 'same'
+}
