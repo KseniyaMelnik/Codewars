@@ -1,0 +1,1 @@
+const reverseNumber = (n) => n>= 0 ? Number(n.toString().split('').reverse().join('')) : -Number((n*-1).toString().split('').reverse().join(''))
