@@ -1,0 +1,11 @@
+function correctness(bobsDecisions, expertDecisions) {
+  let counter = 0
+  for (let i = 0; i<bobsDecisions.length; i++){
+  bobsDecisions[i] === expertDecisions[i] 
+    ? counter++ 
+  : expertDecisions[i] === '?' ||bobsDecisions[i] === '?' 
+    ? counter +=0.5 
+  : counter
+    }
+  return counter
+}
