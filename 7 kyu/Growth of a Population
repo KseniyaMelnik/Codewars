@@ -1,0 +1,11 @@
+function nbYear(p0, percent, aug, p) {
+  let currentPeople = p0
+  let counter = 0
+  
+  while (currentPeople< p) {
+     counter ++
+    currentPeople = (currentPeople+currentPeople*0.01*percent+ aug) 
+  }
+   return counter
+    
+  }
