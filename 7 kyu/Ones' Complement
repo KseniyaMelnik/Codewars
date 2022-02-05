@@ -1,0 +1,1 @@
+const onesComplement = n => n.toString().split('').map(el=>el ==='0' ? 1: 0).join('')
