@@ -1,0 +1,1 @@
+const getAverageAge=list=>Math.round(list.map(obj=>obj.age).reduce((a,b) => a+b)/list.length)
