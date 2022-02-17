@@ -1,0 +1,41 @@
+function formatDuration (seconds) {
+  if (seconds === 0) {
+    return "now"
+  }
+  
+  let date = new Date (seconds*1000)
+  console.log(date)
+  
+  let second = date.getSeconds()
+  let minute = date.getMinutes()
+  let hour = date.getHours()
+  let day = Math.floor((seconds%(31536000))/(86400))
+  let year = Math.floor(seconds/(31536000))
+  
+
+  let yearsReadable = year === 0 ? '' : year === 1 ? '1 year' : `${year} years`
+  let daysReadable = day === 0 ? '' : day === 1 ? '1 day' : `${day} days`
+  let hoursReadable = hour === 0 ? '' : hour === 1 ? '1 hour' : `${hour} hours`
+  let minutesReadable = minute === 0 ? '': minute === 1 ? '1 minute' : `${minute} minutes`
+  let secondsReadable = second === 0 ? '': second === 1 ? '1 second' : `${second} seconds`
+  
+  let arr = []
+  arr.push(yearsReadable, daysReadable, hoursReadable, minutesReadable, secondsReadable)
+  let arrDate = arr.filter(el=> el!== '')
+  
+  console.log(arrDate)
+  
+  let result = arrDate.length === 1 ? arrDate[0] : arrDate.length === 2 ? arrDate[0] + ' and ' + arrDate[1]
+  : arrDate.map(el=> {
+    if (arrDate.indexOf(el) === arrDate.length -1) {
+      return el
+    } else if (arrDate.indexOf(el) === arrDate.length - 2) {
+      return el + ' and '
+    } else {
+      return el + ', '
+    }
+  }).join('')
+  
+  return result
+    
+}
