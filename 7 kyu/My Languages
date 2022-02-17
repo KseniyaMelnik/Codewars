@@ -1,0 +1,15 @@
+function myLanguages(results) {
+  
+  const result = {}
+  Object.entries(results).forEach(([key, value]) => {
+  result[value] = key
+})
+  
+  let arr = []
+  for (let key in result) {
+    if (key>=60){
+      arr.unshift(result[key])
+    }
+  }
+  return arr
+}
