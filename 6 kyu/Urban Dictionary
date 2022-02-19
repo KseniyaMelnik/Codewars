@@ -1,0 +1,16 @@
+var WordDictionary = function () {
+  {
+   this.words= []
+ }
+ 
+
+};
+
+WordDictionary.prototype.addWord = function (word) {
+  this.words.push(word)
+};
+
+WordDictionary.prototype.search = function (word) {
+   let r = new RegExp('^'+word+'$')
+   return this.words.find(el=>r.test(el))!==undefined
+};
