@@ -1,0 +1,16 @@
+function stringify(list) {
+  let result = ""
+  if( list === null){
+    return "null"
+  }
+ function helper (list){
+   if (list.next === null){
+     result +=  list.data + " -> null"
+     return result 
+   } 
+   result += list.data + " -> "
+   return helper(list.next)
+ }
+  
+  helper(list)
+  return result
