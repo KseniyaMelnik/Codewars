@@ -1,0 +1,8 @@
+function recycle(array) {
+  let result = []
+  result.push(array.filter(el => el.material === "paper" || el.secondMaterial === "paper").map(el=> el.type))
+  result.push(array.filter(el => el.material === "glass" || el.secondMaterial === "glass").map(el=> el.type))
+  result.push(array.filter(el => el.material === "organic" || el.secondMaterial === "organic").map(el=> el.type))
+  result.push(array.filter(el => el.material === "plastic" || el.secondMaterial === "plastic").map(el=> el.type))
+  return result
+}
