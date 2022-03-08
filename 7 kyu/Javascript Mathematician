@@ -1,0 +1,7 @@
+function calculate() {
+  const first = [...arguments].reduce((a,b)=>a+b)
+   return function helper(){
+     const second = [...arguments].reduce((a,b)=>a+b)
+     return first + second
+   }
+}
