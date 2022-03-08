@@ -1,0 +1,18 @@
+function getLengthOfMissingArray(arrayOfArrays) {
+  if (arrayOfArrays === null) {
+    return 0
+  }
+  let arr = arrayOfArrays.map(el=> el? el.length: 0).sort((a,b)=>a-b)
+ 
+  if (arr.includes(0)) {
+    return 0
+  }
+  
+  let res = 0
+  for (let i = 0; i< arr.length; i++) {
+    if ((arr[i+1]-arr[i]) >1 ){
+      res = arr[i]+1
+    }
+  }
+  return res
+}
