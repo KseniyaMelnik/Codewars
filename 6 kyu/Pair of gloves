@@ -1,0 +1,15 @@
+function numberOfPairs(gloves)
+{
+const  arr = new Set(gloves)
+let res = 0
+ arr.forEach(el => {
+   let counter = 0
+   for (let i = 0; i< gloves.length; i++) {
+     if (el === gloves[i]){
+       counter++
+     }
+   }
+   res += Math.floor(counter/2)
+ })
+  return res
+}
