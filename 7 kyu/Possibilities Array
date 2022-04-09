@@ -1,0 +1,14 @@
+function isAllPossibilities(x){
+let arr = [...x]
+if (arr.length === 0 ){
+return false
+}
+arr.sort((a,b)=> a-b)
+  let current = 0
+for (let i = 0; i< arr.length; i++) {
+if (arr[i] !== i ){
+current++
+  console.log(current)
+}
+}
+ return current>0 ? false: true
