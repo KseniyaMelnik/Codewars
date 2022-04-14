@@ -1,0 +1,6 @@
+function getCount(str) {
+  let vowelsCount = 0;
+  const vowels = ["a","e","i","o","u"]
+  str.split('').forEach(el => vowels.includes(el)? vowelsCount++ : vowelsCount)
+  return vowelsCount;
+}
