@@ -1,0 +1,13 @@
+class Song {
+  constructor (title, artist){
+    this.title = title,
+    this.artist = artist,
+    this.listeners = []
+  }
+  
+  howMany (people){
+    const addListeners = [...new Set(people.map(person => person.toLowerCase()))]
+    const uniqueListeners = addListeners.filter(person => !this.listeners.includes(person))
+    this.listeners = this.listeners.concat(uniqueListeners)
+    return uniqueListeners.length
+  }
