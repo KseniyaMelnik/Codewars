@@ -1,0 +1,38 @@
+class File {
+  constructor(fullName, contents){
+    this._fullName = fullName
+    this.chunks = fullName.split('.')
+    this._filename = this.chunks.slice(0,-1).join('.')
+    this._extension = this.chunks[this.chunks.length -1]
+    this.contents = contents
+    this.line = 0
+    this.symbol = 0
+  }
+   get fullName() {
+    return this._fullName;
+  }
+  get filename() {
+    return this._filename;
+  }
+  get extension() {
+    return this._extension;
+  }
+  getContents() {
+    return this.contents
+}
+  write(str) {
+    this.contents === '' ? this.contents += str : this.contents += '\n'+ str
+  }
+  gets() {
+    const subString = this.contents.split('\n')[this.line]
+    this.line++
+    return subString
+  }
+  
+  getc () {
+   const character = this.contents[this.symbol]
+    this.symbol++
+    return character
+   }
+  
+  }
