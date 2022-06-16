@@ -1,0 +1,9 @@
+Object.defineProperty(Person.prototype, 'name', {
+	get: function() { 
+        return this.firstName + ' ' + this.lastName;
+    },
+	set: function(name) {
+		this.firstName = name.split(' ')[0];
+    this.lastName = name.split(' ')[1];
+	},
+});
