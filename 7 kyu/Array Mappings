@@ -1,0 +1,7 @@
+Array.prototype.map = function (calback) {
+  let result = []
+  for (let i = 0; i<this.length; i++) {
+    result.push(calback(this[i]))
+  }
+  return result
+}
