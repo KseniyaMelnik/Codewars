@@ -1,0 +1,9 @@
+const alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+function generateName()
+{
+  const result = Array(6).fill(null)
+                      .map(e => alphabet[Math.floor(Math.random()*52)])
+                      .join('')
+  return photoManager.nameExists(result) ? generateName() : result                 
+}
