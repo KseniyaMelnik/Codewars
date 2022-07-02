@@ -1,0 +1,4 @@
+Object.prototype.hash = function(string) {
+  const arr = string.split('.'); 
+  return arr.reduce((prev, next) => (prev) ? prev[next] : prev, this); 
+}
