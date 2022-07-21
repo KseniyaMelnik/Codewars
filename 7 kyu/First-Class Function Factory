@@ -1,0 +1,7 @@
+function factory(x){
+    return function (arr){
+       const newArr =  arr.map(el => el*x)
+       return newArr
+    }
+    
+}
